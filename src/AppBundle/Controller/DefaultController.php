@@ -2,25 +2,20 @@
 
 namespace AppBundle\Controller;
 
-use Psr\Http\Message\ServerRequestInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Zend\Diactoros\Response\HtmlResponse;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
     /**
      * @Route("/", name="homepage")
      */
-    public function indexAction(ServerRequestInterface $request)
+    public function indexAction(Request $request)
     {
-        $renderView = $this->renderView(
-            'default/index.html.twig',
-            ['base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..')]
-        );
-
-        $response = new HtmlResponse($renderView);
-
-        return $response;
+        // replace this example code with whatever you need
+        return $this->render('default/index.html.twig', array(
+            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+        ));
     }
 }
