@@ -16,7 +16,7 @@ class DefaultController extends Controller
     public function indexAction(ServerRequestInterface $request)
     {
         $renderView = $this->renderView('default/index.html.twig', array(
-            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ));
 
         return new HtmlResponse($renderView);
