@@ -1,6 +1,6 @@
 {
-    "name": "samsonasik/my_project",
-    "license": "proprietary",
+    "name": "sitrunlab/learnsymfony",
+    "license": "MIT",
     "type": "project",
     "autoload": {
         "psr-4": {
